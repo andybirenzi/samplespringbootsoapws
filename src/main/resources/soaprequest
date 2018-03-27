@@ -1,10 +1,18 @@
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
-                  xmlns:us="http://andybirenzi.io/springbootsoap">
-    <soapenv:Header/>
-    <soapenv:Body>
-        <us:getCountryRequest>
-            <us:name>Spain</us:name>
-        </us:getCountryRequest>
-    </soapenv:Body>
+                                     xmlns:us="http://andybirenzi.io/springbootsoap">
+<soapenv:Header/>
+<soapenv:Body>
+    <us:getCountryRequest>
+        <us:name>Spain</us:name>
+    </us:getCountryRequest>
+</soapenv:Body>
+
+
+<soapenv:Header/>
+<soapenv:Body>
+    <us:getPersonRequest>
+        <us:name>jim</us:name>
+    </us:getPersonRequest>
+</soapenv:Body>
 
 </soapenv:Envelope>

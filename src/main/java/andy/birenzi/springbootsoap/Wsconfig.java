@@ -37,4 +37,18 @@ public class Wsconfig extends WsConfigurerAdapter{
     public XsdSchema countriesSchema() {
         return new SimpleXsdSchema(new ClassPathResource("countries.xsd"));
     }
+    @Bean(name = "person")
+    public DefaultWsdl11Definition person(XsdSchema personSchema) {
+        DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
+        wsdl11Definition.setPortTypeName("personPort");
+        wsdl11Definition.setLocationUri("/ws");
+        wsdl11Definition.setTargetNamespace("http://andybirenzi.io/springbootsoap");
+        wsdl11Definition.setSchema(personSchema);
+        return wsdl11Definition;
+    }
+
+    @Bean
+    public XsdSchema personSchema() {
+        return new SimpleXsdSchema(new ClassPathResource("person.xsd"));
+    }
 }
